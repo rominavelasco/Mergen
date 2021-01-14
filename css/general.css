@@ -60,8 +60,22 @@ font-family: 'Poppins', sans-serif;*/
     text-align: left;
 }
 
+/* Parrafo */
 
-/*Buttons btn-primary btn-secondary */
+p.poppins-p {
+    padding: 22px 0;
+    font-family: Poppins;
+    font-size: 16px;
+    color: #383142;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px;
+    letter-spacing: 0em;
+    text-align: left;
+}
+
+
+/* Buttons btn-primary btn-secondary */
 
 .btn-primary {
     background-color:#5B14BC!important;
@@ -85,4 +99,65 @@ font-family: 'Poppins', sans-serif;*/
     line-height: 20px;
     letter-spacing: 0em;
     text-align: left;
+}
+
+
+/* Card */
+
+.card {
+    border-style: none;
+}
+
+.card-img, .card-img-top {
+    border-radius: 8px;
+    width: 320px;
+    height: 286px;
+    margin: 0 auto;
+    box-shadow: 0px 5px 5px rgb(0 0 0 / 42%);
+}
+
+.container, .container-fluid, .container-lg, .container-md, .container-sm, .container-xl {
+    width: 100%;
+    padding-right: 20px;
+    padding-left: 20px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+/* badge */
+
+.badge-primary {
+    background-color: #E4D1FF;
+   margin-right: 0.5em;
+}
+
+.badge-primary .heading4 {
+
+    line-height: 24px;
+    color: #7B20F9;
+   text-align: center; 
+}
+
+.btn-heading2 {
+    margin-bottom: 0px;
+}
+
+.btn-group-lg>.btn, .btn-lg {
+    padding: 0.7rem 1rem;
+}
+
+/* Links */
+
+a {
+    color: #7B20F9;
+}
+
+/* Icon star */
+
+i.bi.bi-star-fill {
+    color: #FCCE5C;
+}
+
+.navbar-brand {
+    color: #7B20F9!important;
 }
