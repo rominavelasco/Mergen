@@ -98,7 +98,7 @@ p.poppins-p {
     font-weight: 400;
     line-height: 20px;
     letter-spacing: 0em;
-    text-align: left;
+    text-align: center;
 }
 
 
@@ -128,15 +128,29 @@ p.poppins-p {
 
 .badge-primary {
     background-color: #E4D1FF;
-   margin-right: 0.5em;
+    margin-right: 0.5em;
+    line-height: 24px!important;
+    color: #7B20F9!important;
+    text-align: center!important; 
+    font-family: 'Poppins', sans-serif;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 600;
+    letter-spacing: 0em;
 }
 
-.badge-primary .heading4 {
+/*.badge-primary .heading4 {
 
-    line-height: 24px;
-    color: #7B20F9;
-   text-align: center; 
-}
+    line-height: 24px!important;
+    color: #7B20F9!important;
+    text-align: center!important; 
+    font-family: 'Poppins', sans-serif;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    letter-spacing: 0em;
+    
+}*/
 
 .btn-heading2 {
     margin-bottom: 0px;
@@ -156,8 +170,148 @@ a {
 
 i.bi.bi-star-fill {
     color: #FCCE5C;
+    font-size: 10px;
 }
+
+i.bi.bi-three-dots-vertical, i.bi.bi-arrow-left-short {
+    font-size: 1.2rem !important;
+}
+
+i.bi.bi-share-fill {
+    font-size: 1rem !important;
+}
+
+.bi-arrow-left-short::before {
+    content: "\f12c";
+    font-size: 1.7rem;
+}
+
+.bi-star-fill::before, .bi-eye-fill::before {
+    line-height: 16px !important;
+}
+
+i.bi.bi-download, i.bi.bi-bookmark {
+    color: #383142 !important;
+    font-size: 16px;
+    margin-left: 8px;
+}
+
+.bi-share-fill::before, .bi-arrow-left-short::before, .bi-three-dots-vertical::before {
+    line-height: 1.5rem !important;
+}
+
+/* Navbar color icon*/
 
 .navbar-brand {
     color: #7B20F9!important;
+}
+
+/* Link bold */
+
+.link-bold {
+    font-weight: 600;
+}
+
+
+
+/*----------------------------------------------*/
+
+/*.item.col-sm-4.col-xl-4 {
+    padding: 0px !important;
+}
+.owl-carousel .owl-item {
+    margin-right: 8px !important;
+}*/
+.owl-carousel .owl-item img {
+    display: block;
+    width: 100%;
+    border-radius: 4px;
+    box-shadow: 0px 1px 3px 0px rgb(0 0 0 / 42%);
+    margin-bottom: 16px;
+    height: 134px;
+    max-width: 90px;
+}
+
+.heading3 {
+    margin: 32px 0 16px;
+}
+
+.badge-primary .heading4 {
+    margin-bottom: 0px;
+}
+
+.btn-primary {
+    background-color: #7B20F9!important;
+    color: #ffffff!important;
+    border: 1px solid #7B20F9!important;
+height: 48px;
+}
+
+/*Necesito que los votos tengan un div y tenga una clase.
+
+Este row debería tener una clase xq hay varios es para la bajada de la card principal.*/
+
+.row .card-principal {
+    margin: 32px 0;
+}
+
+
+/* Hader Nav */
+.bg-light {
+    box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.1);
+    background-color: #ffffff!important;
+}
+
+.nav-link {
+    display: block;
+    padding: .5rem 1rem;
+    color: #383142;
+}
+
+/* Navbar bottom */
+
+.navbar-bottom {
+    background-color: #7B20F9;    
+}
+
+.text-bottom {
+    color: #ffffff !important;
+    font-family: 'Poppins', sans-serif;
+    font-size: 12px;
+    font-style: normal;
+}
+
+.bi-house-door-fill {
+    color: #ffffff
+}
+
+.bi-search {
+    color: #ffffff
+}
+
+.bi-person {
+    color: #ffffff
+}
+
+.bi-bell {
+    color: #ffffff
+}
+
+.fixed-bottom {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1030;
+}
+
+
+/* Buscador imagen detalle */
+
+.img-detalle {
+    border-radius: 4px;
+    box-shadow: 0px 1px 3px 0px rgb(0 0 0 / 42%);
+    margin-bottom: 16px;
+    height: 134px;
+    max-width: 90px;
 }
