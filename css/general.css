@@ -75,7 +75,7 @@ p.poppins-p {
 }
 
 
-/* Buttons btn-primary btn-secondary */
+/* Buttons btn-primary btn-secondary btn-block */
 
 .btn-primary {
     background-color:#5B14BC!important;
@@ -84,11 +84,17 @@ p.poppins-p {
 }
 
 .btn-secondary {
-    background-color:#ffffff!important;
-    color:  #5B14BC!important;
-    border: 1px solid #5B14BC!important;
+    background-color:#ffffff!important;   
+    color: #7B20F9!important;
+    border: 1px solid #7B20F9!important;
+    margin-bottom: 16px;
 }
 
+/* btn-block modal leer rayuela */
+
+.btn-block {
+    margin-bottom: 16px !important;
+}
 
 
 .btn-heading2 {
@@ -100,6 +106,13 @@ p.poppins-p {
     letter-spacing: 0em;
     text-align: center;
 }
+
+/* btn buscador*/
+
+.btn-outline-secondary {
+    border-color: #dadada;
+}
+   
 
 
 /* Card */
@@ -130,13 +143,14 @@ p.poppins-p {
     background-color: #E4D1FF;
     margin-right: 0.5em;
     line-height: 24px!important;
-    color: #7B20F9!important;
+    color: #7A1BF5!important; 
     text-align: center!important; 
     font-family: 'Poppins', sans-serif;
     font-size: 12px;
     font-style: normal;
     font-weight: 600;
     letter-spacing: 0em;
+    margin-top: 24px;
 }
 
 /*.badge-primary .heading4 {
@@ -203,9 +217,14 @@ i.bi.bi-download, i.bi.bi-bookmark {
 /* Navbar color icon*/
 
 .navbar-brand {
-    color: #7B20F9!important;
+    font-family: 'Poppins';
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 34px;
+   color: #383142!important;
 }
-
+   
 /* Link bold */
 
 .link-bold {
@@ -271,7 +290,8 @@ Este row debería tener una clase xq hay varios es para la bajada de la card pri
 /* Navbar bottom */
 
 .navbar-bottom {
-    background-color: #7B20F9;    
+    background-color: #7B20F9;   
+    padding: 0; 
 }
 
 .text-bottom {
@@ -315,3 +335,55 @@ Este row debería tener una clase xq hay varios es para la bajada de la card pri
     height: 134px;
     max-width: 90px;
 }
+
+/*********************************/
+/*.navbar-expand .navbar-nav .nav-link [class^="bi-"]::before, [class*=" bi-"]::before, .navbar-expand .navbar-nav .nav-link .active .text-bottom {
+    color: #E4D1FF !important;
+}
+
+
+.active .text-bottom, .active [class^="bi-"]::before, [class*=" bi-"]::before {
+    color: #ffffff;
+}  Revisar */
+
+.bi-mic::before {
+    color: #383142 !important;
+}
+
+/* Form control inputs*/
+
+.form-control {
+    border: 1px solid #DADADA;
+    border-radius: 4px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    font-style: normal;
+}
+
+/* Modal */
+
+.modal-header {
+    border-bottom: none;
+}
+
+.modal-header .close {
+    padding: 0px;
+    margin: 0px;
+}
+
+/*a los botones les faltan los estilos de heading2 - agregado*/
+
+.modal-body .heading1 {
+   text-align: center;
+   margin-bottom: 16px;
+}
+
+/*revisar*/
+
+main {
+    margin: 24px 0;
+   }
+   
+   .heading3 {
+    margin: 16px 0;
+   }
