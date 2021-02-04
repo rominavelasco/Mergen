@@ -113,7 +113,13 @@ p.poppins-p {
     border-color: #dadada;
 }
    
-
+/*btn descarga*/
+.btn-descarga {
+    border: none;
+    background-color: #fff;
+    padding-left: 5px;
+    padding-right: 5px;
+}
 
 /* Card */
 
@@ -270,10 +276,13 @@ height: 48px;
 
 Este row debería tener una clase xq hay varios es para la bajada de la card principal.*/
 
-.row .card-principal {
+.row .card-home {
     margin: 32px 0;
 }
 
+.row .card-detalle {
+    margin: 32px 0;
+}
 
 /* Hader Nav */
 .bg-light {
@@ -346,6 +355,18 @@ Este row debería tener una clase xq hay varios es para la bajada de la card pri
     color: #ffffff;
 }  Revisar */
 
+.nav-active {
+    background-color: #442a8c;
+}
+
+.nav-active .bi-house-door-fill::before{
+    color: #E4D1FF!important;
+}
+
+.nav-active .bi-search::before {
+    color: #E4D1FF!important;
+}
+
 .bi-mic::before {
     color: #383142 !important;
 }
@@ -355,9 +376,7 @@ Este row debería tener una clase xq hay varios es para la bajada de la card pri
 .form-control {
     border: 1px solid #DADADA;
     border-radius: 4px;
-    font-family: 'Poppins', sans-serif;
-    font-size: 14px;
-    font-style: normal;
+    font-family: 'Poppins', sans-serif;    
 }
 
 /* Modal */
@@ -379,9 +398,11 @@ Este row debería tener una clase xq hay varios es para la bajada de la card pri
 }
 
 /*revisar*/
-
+/*main - margin son necesarios para que no tape contenido revisar que no afecte el estilo general*/
 main {
     margin: 24px 0;
+    margin-top: 80px;
+    margin-bottom: 58px;
    }
    
    .heading3 {
