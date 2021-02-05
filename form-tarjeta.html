@@ -23,7 +23,7 @@
       
     <header> 
       <nav class="navbar fixed-top navbar-light bg-light">
-        <a class="navbar-brand" href="#" aria-label="Volver atrás">
+        <a class="navbar-brand" href="form-premium.html" aria-label="Volver atrás">
           <i aria-hidden="true" class="bi bi-arrow-left-short"></i>
         </a>
         <div class="mx-auto">
@@ -60,9 +60,9 @@
             
             <div class="form-group">
                 <div class="input-group">
-                    <input type="password" id="tarjeta" name="tarjeta" class="form-control form-control-lg" aria-label="Número de Tarjeta" aria-describedby="passwordHelpBlock" placeholder="Número de Tarjeta" required>
+                    <input type="password" id="tarjeta" name="tarjeta" class="form-control form-control-lg input-text" aria-label="Número de Tarjeta" aria-describedby="passwordHelpBlock" placeholder="Número de Tarjeta" required>
                     <div class="input-group-append">
-                      <button class="btn btn-outline-secondary" type="button" id="toggle-tarjeta" aria-label="Muestra la contraseña como texto sin formato. Advertencia: esto mostrará su contraseña en la pantalla.">
+                      <button class="btn btn-outline-secondary" type="button" id="toggle-tarjeta" aria-label="Muestra número tarjeta como texto sin formato. Advertencia: esto mostrará su número tarjeta en la pantalla.">
                         <i id="icon-pass" class="bi bi-eye-fill" aria-hidden="true"></i>
                       </button>
                     </div>
@@ -76,7 +76,7 @@
             <div class="form-row">
                 
                 <div class="form-group col-6 col-md-6">
-                   <input type="text" id="vencimiento" class="form-control form-control-lg" aria-label="Vencimiento" aria-describedby="venceHelpBlock" placeholder="Vencimiento" required>
+                   <input type="text" id="vencimiento" class="form-control form-control-lg input-text" aria-label="Vencimiento" aria-describedby="venceHelpBlock" placeholder="Vencimiento" required>
                     <small id="venceHelpBlock" class="form-text text-muted">
                         Formato MM/AA
                     </small>
@@ -85,9 +85,9 @@
                 
                 <div class="form-group col-6 col-md-6">
                     <div class="input-group">
-                        <input type="password" id="cvv" name="cvv" class="form-control form-control-lg" aria-label="CVV" aria-describedby="codigoHelpBlock" placeholder="CVV" required>
+                        <input type="password" id="cvv" name="cvv" class="form-control form-control-lg input-text" aria-label="CVV" aria-describedby="codigoHelpBlock" placeholder="CVV" required>
                         <div class="input-group-append">
-                          <button class="btn btn-outline-secondary" type="button" id="toggle-codigo" aria-label="Muestra la contraseña como texto sin formato. Advertencia: esto mostrará su contraseña en la pantalla.">
+                          <button class="btn btn-outline-secondary" type="button" id="toggle-codigo" aria-label="Muestra código de seguridad como texto sin formato. Advertencia: esto mostrará su código de seguridad en la pantalla.">
                             <i id="icon-pass" class="bi bi-eye-fill" aria-hidden="true"></i>
                           </button>
                         </div>
@@ -101,12 +101,21 @@
             </div>
             
             <div class="form-group">     
-                <input type="text" id="nombre" name="nombre" class="form-control form-control-lg" aria-label="Nombre que figura en la tarjeta" placeholder="Nombre que figura en la tarjeta" required>
+                <input type="text" id="nombre" name="nombre" class="form-control form-control-lg input-text" aria-label="Nombre que figura en la tarjeta" placeholder="Nombre que figura en la tarjeta" required>
             </div>
             
             
             <div class="form-group">     
                 <input type="text" id="dni" name="dni" class="form-control form-control-lg" aria-label="Documento Nacional de Identidad" placeholder="DNI" required>
+            </div>
+
+            <div class="form-group">
+              <div class="form-check">
+                <input class="form-check-input check-input" type="checkbox" id="gridCheck" required>
+                <label class="form-check-label" for="gridCheck">
+                  <a href="#" title="Ver los Términos y condiciones" class="link-bold"> <span class="termino-condicion">Acepto los </span>Términos y condiciones</a>  
+                </label>
+              </div>
             </div>
             
             
@@ -161,13 +170,13 @@
                //togglePasswordButton.textContent = 'Hide password';    
                iconPass.classList.remove('bi-eye-fill');
                iconPass.classList.add('bi-eye-slash-fill');
-               togglePasswordButton.setAttribute('aria-label', 'Ocultar contraseña.');  
+               togglePasswordButton.setAttribute('aria-label', 'Ocultar número tarjeta.');  
           } 
       else {   passwordInput.type = 'password';    
                //togglePasswordButton.textContent = 'Show password'; 
                iconPass.classList.remove('bi-eye-slash-fill');
                iconPass.classList.add('bi-eye-fill');
-               togglePasswordButton.setAttribute('aria-label', 'Mostrar contraseña como texto sin formato. ' + 'Advertencia: esto mostrará su contraseña en la pantalla.');  
+               togglePasswordButton.setAttribute('aria-label', 'Mostrar número tarjeta como texto sin formato. ' + 'Advertencia: esto mostrará su número tarjeta en la pantalla.');  
           }}
      
   
@@ -181,13 +190,13 @@
                //togglePasswordButton.textContent = 'Hide password';    
                iconRePass.classList.remove('bi-eye-fill');
                iconRePass.classList.add('bi-eye-slash-fill');
-               toggleRePasswordButton.setAttribute('aria-label', 'Ocultar contraseña.');  
+               toggleRePasswordButton.setAttribute('aria-label', 'Ocultar código seguridad.');  
           } 
       else {   repasswordInput.type = 'password';    
                //togglePasswordButton.textContent = 'Show password'; 
                iconRePass.classList.remove('bi-eye-slash-fill');
                iconRePass.classList.add('bi-eye-fill');
-               toggleRePasswordButton.setAttribute('aria-label', 'Mostrar contraseña como texto sin formato. ' + 'Advertencia: esto mostrará su contraseña en la pantalla.');  
+               toggleRePasswordButton.setAttribute('aria-label', 'Mostrar código seguridad como texto sin formato. ' + 'Advertencia: esto mostrará su código seguridad en la pantalla.');  
           }}
       
       
