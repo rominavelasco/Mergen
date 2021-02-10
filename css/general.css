@@ -408,3 +408,7 @@ main {
    .heading3 {
     margin: 16px 0;
    }
+
+   .modal {
+    z-index: 1072;
+}
