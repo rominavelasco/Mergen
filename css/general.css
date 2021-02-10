@@ -410,5 +410,5 @@ main {
    }
 
    .modal {
-    z-index: 1072;
+    z-index: 1072!important;
 }
