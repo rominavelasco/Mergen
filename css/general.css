@@ -372,7 +372,7 @@ Este row debería tener una clase xq hay varios es para la bajada de la card pri
     color: #E4D1FF!important;
 }
 
-.bi-mic::before {
+.bi-mic::before, .bi-search::before  {
     color: #383142 !important;
 }
 
