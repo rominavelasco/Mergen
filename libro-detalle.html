@@ -23,16 +23,23 @@
     <body>
     
     <nav class="navbar fixed-top navbar-light bg-light">
-        <a class="navbar-brand" href="buscador-detalle.html" aria-label="Volver atrás">
+        <a class="navbar-brand" href="buscador-detalle.html">
+          <span class="sr-only" aria-hidden="true">Volver atrás</span>
           <i aria-hidden="true" class="bi bi-arrow-left-short"></i>
         </a>
         
         <ul class="nav justify-content-end">
           <li class="nav-item">
-            <a class="nav-link" href="#" aria-label="Compartir"><i aria-hidden="true" class="bi bi-share-fill"></i></a>
+            <a class="nav-link" href="#" role="button">
+              <span class="sr-only" aria-hidden="true">Compartir</span>
+              <i aria-hidden="true" class="bi bi-share-fill"></i>
+            </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#" aria-label="Menú"><i aria-hidden="true" class="bi bi-three-dots-vertical"></i></a>
+            <a class="nav-link" href="#" role="button">
+              <span class="sr-only" aria-hidden="true">Menú</span>
+              <i aria-hidden="true" class="bi bi-three-dots-vertical"></i>
+            </a>
           </li>
         </ul>
     </nav>      
@@ -60,11 +67,13 @@
       <div class="col-4">
           
         <button type="button" class="heading4 btn-descarga" data-toggle="modal" data-target="#exampleModal" title="Descargar">
+          <span class="sr-only" aria-hidden="true">Descargar</span>
           <i class="bi bi-download" aria-hidden="true"></i>
         </button>
         
         <span class="heading4">
-          <a href="#" aria-label="Agregar a favoritos">
+          <a href="#" role="button">
+            <span class="sr-only" aria-hidden="true">Agregar a favoritos</span>
             <i class="bi bi-bookmark" aria-hidden="true"></i>
           </a>
         </span> 
@@ -73,7 +82,7 @@
       
       <div class="col-6">
           <span class="heading4">
-              <span class="sr-only">Calificación media de los usuarios - 4 estrellas</span>
+              <span class="sr-only" aria-hidden="true">Calificación media de los usuarios - 4 estrellas</span>
               <i aria-hidden="true" class="bi bi-star-fill"></i>
               <i aria-hidden="true" class="bi bi-star-fill"></i>
               <i aria-hidden="true" class="bi bi-star-fill"></i>
@@ -83,7 +92,7 @@
           </div>
         <div class="col-6">
             <span class="heading4">
-              <span class="sr-only">visualizaciones</span>
+              <span class="sr-only" aria-hidden="true">visualizaciones</span>
               <i aria-hidden="true" class="bi bi-eye-fill"></i>
               <span class="lecturas" style="padding-left: 5px;"> 9,58 M lecturas </span>
             </span>
@@ -94,7 +103,7 @@
         <div class="col-sm-12">
           <!-- pill badges -->
           <span class="badge badge-pill badge-primary">Ficción</span>
-          <span class="badge badge-pill badge-primary">latinoamericano</span>
+          <span class="badge badge-pill badge-primary">Latinoamericano</span>
         </div>
       </div>
       
@@ -102,7 +111,7 @@
         <div class="col-sm-12">
           <p class="poppins-p">
             El lector de Rayuela es recibido por una advertencia del autor antes del "primer" capítulo. 
-            En ella, Julio Cortázar propone un reto o, mejor, un juego. La novela puede ser leída, al menos, <a href="#" title="Reseña de rayuela" class="link-bold">Ver mas</a>
+            En ella, Julio Cortázar propone un reto o, mejor, un juego. La novela puede ser leída, al menos, <a href="#" title="Reseña de rayuela" class="link-bold" role="button">Ver mas</a>
           </p>            
       
           <!-- Button trigger modal -->
@@ -148,21 +157,13 @@
         
         </div>
       </section>  
-        
-        
-        
-        
-       
-      
-    
-      
-        
+     
       <!--/Container-->
     </div>
 
     
       <!-- Modal -->
-      <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="dialog_label" aria-hidden="true">
+      <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="dialog_label" aria-describedby="dialog_desc" aria-hidden="true">
         <div class="modal-dialog">
           <div class="modal-content">
             <div class="modal-header">
@@ -338,7 +339,7 @@
                 
                 <div class="row">
                   <div class="col-sm-12">
-                    <button type="button" class="btn btn-primary btn-lg btn-block btn-heading2">Hacerme Premium</button>
+                    <a href="form-premium.html" role="button" class="btn btn-primary btn-lg btn-block btn-heading2 href-btn">Hacerme Premium</a>
                   </div>                  
                 </div>               
              

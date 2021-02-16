@@ -64,7 +64,7 @@ font-family: 'Poppins', sans-serif;*/
 
 p.poppins-p {
     padding: 22px 0;
-    font-family: Poppins;
+    font-family: 'Poppins', sans-serif;
     font-size: 16px;
     color: #383142;
     font-style: normal;
@@ -220,10 +220,15 @@ i.bi.bi-download, i.bi.bi-bookmark {
     line-height: 1.5rem !important;
 }
 
+.bi-check-circle {
+    color:#0c8377; 
+    font-size: 16px;
+}
+
 /* Navbar color icon*/
 
 .navbar-brand {
-    font-family: 'Poppins';
+    font-family: 'Poppins', sans-serif;
     font-size: 18px;
     font-style: normal;
     font-weight: 600;
@@ -402,7 +407,7 @@ Este row debería tener una clase xq hay varios es para la bajada de la card pri
 main {
     margin: 24px 0;
     margin-top: 80px;
-    margin-bottom: 58px;
+    margin-bottom: 62px;
    }
    
    .heading3 {
@@ -411,4 +416,55 @@ main {
 
    .modal {
     z-index: 1072!important;
+}
+
+/* a href btn */
+.href-btn {
+    padding: .8rem 1rem;
+}
+
+/* Perfil */
+.avatar {
+    border-radius: 50%;
+}
+
+.material-icons {
+    font-family: 'Material Icons';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 24px;  /* Preferred icon size */
+    display: inline-block;
+    line-height: 1;
+    text-transform: none;
+    letter-spacing: normal;
+    word-wrap: normal;
+    white-space: nowrap;
+    direction: ltr;
+    color: #7B20F9;
+    /* Support for all WebKit browsers. */
+    -webkit-font-smoothing: antialiased;
+    /* Support for Safari and Chrome. */
+    text-rendering: optimizeLegibility;
+  
+    /* Support for Firefox. */
+    -moz-osx-font-smoothing: grayscale;
+  
+    /* Support for IE. */
+    font-feature-settings: 'liga';
+}
+
+.jumbotron-fluid {
+    background-color: #7B20F9;
+}
+
+.jumbotronH1{
+    color:#fff;
+}
+
+.jumbotronH2{
+    color:#fff;
+}
+
+.list-group-item {
+    font-family: 'Poppins', sans-serif;
 }
