@@ -13,7 +13,7 @@
     
     <!--General CSS-->
     <link rel="stylesheet" href="css/general.css">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
     
     </head>
     <body>
@@ -26,61 +26,62 @@
     </nav>      
     
     
-    <main>
-        <div class="jumbotron jumbotron-fluid">
-            <div class="container">
+    <main class="d-flex flex-column">
+        <div class="jumbotron jumbotron-fluid mb-0">
+            <div class="px-4">
                 
                 <img src="img/avatar.jpeg" class="avatar" alt="Mi avatar" width="100" height="100">
               
-              <h1 class="display-4 heading1 jumbotronH1">Jorgelina Hernández <i aria-hidden="true" class="bi bi-pencil"></i></h1>
-              <h2 class="heading2 jumbotronH2"><i aria-hidden="true" class="bi bi-star-fill"></i> Premium</h2>
+              <h1 class="display-4 heading1 jumbotronH1 mt-4 d-flex align-items-center">
+                  Jorgelina Hernández
+                  <i aria-hidden="true" class="bi bi-pencil ml-2"></i>
+                </h1>
+              <h2 class="heading2 jumbotronH2 d-flex align-items-center">
+                  <i aria-hidden="true" class="bi bi-star-fill mr-2"></i>
+                  Premium
+                </h2>
               
             </div>
         </div>
-      
-    <div class="container">
 
-        <div class="list-group">
-            <a href="#" class="list-group-item list-group-item-action" title="Ir a Favoritos">                
-                <i aria-hidden="true" class="material-icons">
-                    bookmark
+        <div class="list-group overflow-auto">
+            <a href="#" class="list-group-item list-group-item-action d-flex align-items-center py-3">
+                <i aria-hidden="true" class="material-icons-outlined mr-3">
+                    bookmark_border
                 </i>
                 Favoritos
             </a>
-            <a href="#" class="list-group-item list-group-item-action" title="Ir a Descargas">
-                <i aria-hidden="true" class="material-icons">
+            <a href="#" class="list-group-item list-group-item-action d-flex align-items-center py-3">
+                <i aria-hidden="true" class="material-icons-outlined mr-3">
                     save_alt
                 </i>
                 Descargas
             </a>
-            <a href="#" class="list-group-item list-group-item-action" title="Ir a Cuenta Premium">
-                <i aria-hidden="true" class="material-icons">
+            <a href="#" class="list-group-item list-group-item-action d-flex align-items-center py-3">
+                <i aria-hidden="true" class="material-icons-outlined mr-3">
                     grade
                 </i>
                 Premium
             </a>
-            <a href="#" class="list-group-item list-group-item-action" title="Ir a Configuración">
-                <i aria-hidden="true" class="material-icons">
+            <a href="#" class="list-group-item list-group-item-action d-flex align-items-center py-3">
+                <i aria-hidden="true" class="material-icons-outlined mr-3">
                     settings
                 </i>
                 Configuración
             </a>
-            <a href="declaracion-accesibilidad.html" class="list-group-item list-group-item-action" title="Ir a Declaración de Accesibilidad">
-                <i class="material-icons" aria-hidden="true">
+            <a href="declaracion-accesibilidad.html" class="list-group-item list-group-item-action d-flex align-items-center py-3">
+                <i class="material-icons-outlined mr-3" aria-hidden="true">
                     accessible
                 </i>
                 Declaración de Accesibilidad
             </a>
-            <a href="#" class="list-group-item list-group-item-action" title="Ir a Legales">
-                <i class="material-icons" aria-hidden="true">
+            <a href="#" class="list-group-item list-group-item-action d-flex align-items-center py-3">
+                <i class="material-icons-outlined mr-3" aria-hidden="true">
                     verified
                 </i>
                 Legales
             </a>
         </div>
-
-    <!--/Container-->
-    </div>
 
     </main>
     <nav class="navbar navbar-expand navbar-bottom fixed-bottom justify-content-center" id="footer-nav" aria-label="Footer">

@@ -404,10 +404,14 @@ Este row debería tener una clase xq hay varios es para la bajada de la card pri
 
 /*revisar*/
 /*main - margin son necesarios para que no tape contenido revisar que no afecte el estilo general*/
+.navbar {
+    height: 60px;
+}
+
 main {
-    margin: 24px 0;
-    margin-top: 80px;
-    margin-bottom: 62px;
+    margin-top: 60px;
+    margin-bottom: 60px;
+    height: calc(100vh - 120px);
    }
    
    .heading3 {
@@ -428,7 +432,7 @@ main {
     border-radius: 50%;
 }
 
-.material-icons {
+.material-icons-outlined {
     font-family: 'Material Icons';
     font-weight: normal;
     font-style: normal;
