@@ -414,17 +414,23 @@ Este row debería tener una clase xq hay varios es para la bajada de la card pri
 }
 
 main {
-    margin-top: 60px;
-    margin-bottom: 60px;
-    height: calc(100vh - 120px);
+    --header-height: 60px;
+    --footer-height: 60px;
+    margin-top: var(--header-height);
+    margin-bottom: var(--footer-height);
+    height: calc(100vh - var(--header-height) - var(--footer-height));
     overflow: auto;
-   }
-   
-   .heading3 {
-    margin: 16px 0;
-   }
+}
 
-   .modal {
+main.no-footer {
+    --footer-height: 20px;
+}
+   
+.heading3 {
+    margin: 16px 0;
+}
+
+.modal {
     z-index: 1072!important;
 }
 
