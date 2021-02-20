@@ -13,13 +13,31 @@
     
     <!--General CSS-->
     <link rel="stylesheet" href="css/general.css">
+
+    <style>
+        .btn-group {
+            border-radius: 6px;
+            box-shadow: 1px 2px #383142;
+            margin-bottom: 0px;
+        }
+
+        .bi-bookmark2 {
+            margin-left: 0px!important;
+        }
+       
+        .p-frase{
+            padding-top: 0px!important;
+        }
+
+        
+    </style>
     
     </head>
     <body>
    
     <main>
       
-    <div class="container">  
+    <div class="container" id="global_content">  
         
         <div class="row">
             <div class="col-12">
@@ -36,7 +54,15 @@
                     tubo de dentífrico.
                 </p>
                    
-                <p class="poppins-p">
+                <div class="btn-group col-5 offset-3 col-md-2 offset-md-5" role="group" aria-label="Herramientas con grupo de botones">
+                    <button type="button" class="btn btn-tools" title="Compartir cita" data-toggle="modal" data-target="#exampleModal"><i aria-hidden="true" class="bi bi-share"></i></button>
+                    <button type="button" class="btn btn-tools" title="Agregar cita a notas"><i aria-hidden="true" class="bi bi-file-earmark-plus"></i></button>
+                    <button type="button" class="btn btn-tools" title="Marcar cita"><i aria-hidden="true" class="bi bi-bookmark bi-bookmark2"></i></button>
+                </div>
+                
+                
+                
+                <p class="poppins-p p-frase">
                     <svg aria-hidden="true" width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg" role="img">
                         <path d="M16.9517 8.4758C16.9517 13.1569 13.1569 16.9517 8.4758 16.9517C3.79471 16.9517 -5.56449e-05 13.1569 -5.60541e-05 8.4758C-5.64633e-05 3.79472 3.79471 -5.41629e-05 8.4758 -5.45721e-05L16.9517 -5.53131e-05L16.9517 8.4758Z" fill="#FCCE5C"/>
                     </svg>
@@ -44,11 +70,9 @@
                     <span class="sr-only" aria-hidden="true">Inicio Cita Seleccionada</span>
                     <!-- HTML to write -->
                     <span class="frase"> 
-                    <a href="#">
-                    
                     Pero ella no estaría ahora en el puente. Su fina cara de translúcida piel se asomaría a viejos portales en el ghetto del Marais, 
                     quizá estuviera charlando con una vendedora de papas fritas o comiendo una salchicha caliente en el boulevard de Sébastopol. 
-                    De todas maneras subí hasta el puente, y la Maga no estaba.</a>
+                    De todas maneras subí hasta el puente, y la Maga no estaba.
                     </span>
                     
                     <span class="sr-only" aria-hidden="true">Fin Cita Seleccionada</span>
@@ -80,23 +104,39 @@
                     jirones de tela destrozada cayendo entre destellos de varillas desencajadas, y nos 
                 </p>
 
-                <div class="tooltip bs-tooltip-top" role="tooltip">
-                    <div class="arrow"></div>
-                    <div class="tooltip-inner">
-                      Some tooltip text!
-                    </div>
-                  </div>
-            
-            
             </div>
-
-            
-     
-        
         </div>
  
     <!--/Container-->
     </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="dialog_label" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+                    <h1 id="dialog_label" class="heading1" >Compartir</h1>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Cerrar">
+                    <span aria-hidden="true">×</span>
+              </button>
+            </div>
+            
+            
+            <div class="modal-body">
+              <div class="container-fluid">
+                <div class="row">
+                  <div class="col-sm-12 col-lg-6 offset-lg-2"> 
+                    <a href="compartir-email.html" title="Seleccionar red social o apliación para compartir">
+                        <img src="img/androidview.jpg" alt="" height="400">
+                    </a>                   
+                    </div>                  
+                </div>
+               </div>
+            </div>        
+          
+        </div>
+        </div>
+      </div>
 
     
 
@@ -118,6 +158,21 @@
       $(document).ready(function(){
   $('[data-toggle="tooltip"]').tooltip();
 });
+
+
+        
+        //$('#global_content').attr('aria-hidden', 'true');
+                
+                //$('#exampleModal').on('hidden.bs.modal', function(){
+//$('#global_content').attr('aria-hidden', 'true');
+//});
+$('#exampleModal').on('shown.bs.modal', function () {
+    $("#global_content").attr('aria-hidden', false);
+});
+$('#exampleModal').on('hidden.bs.modal', function () {
+    $("#global_content").attr('aria-hidden', true);
+});
+        
         </script>
   
    
