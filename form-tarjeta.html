@@ -56,7 +56,7 @@
             
             <div class="form-group">
                 <div class="input-group">
-                  <input id="tarjeta" class="form-control form-control-lg input-text" aria-describedby="passwordHelpBlock" placeholder="Número de Tarjeta" aria-label="Ingresar número de Tarjeta">
+                  <input id="tarjeta" class="form-control form-control-lg input-text" aria-describedby="passwordHelpBlock" placeholder="Número de Tarjeta" aria-label="Número de Tarjeta">
                 </div>
                 
                 <small id="passwordHelpBlock" class="form-text text-muted">
@@ -67,18 +67,17 @@
             <div class="form-row">
                 
                 <div class="form-group col-6 col-md-6">
-                    <input type="text" id="vencimiento" class="form-control form-control-lg input-text" aria-describedby="venceHelpBlock" placeholder="Vencimiento" aria-label="Ingresar vencimiento de tarjeta">
-                    <small id="venceHelpBlock" class="form-text text-muted">
-                        Formato MM/AA
+                    <input type="text" id="vencimiento" class="form-control form-control-lg input-text" aria-describedby="venceHelpBlock" placeholder="Vencimiento" aria-label="Vencimiento">
+                    <small id="venceHelpBlock" class="form-text text-muted" aria-label="Formato: dos dígitos para el mes - barra - dos dígitos para el año">
+                      <span aria-hidden="true">Formato MM/AA</span>
                     </small>
                 </div>
                 
-                
                 <div class="form-group col-6 col-md-6">
-                    <div class="input-group">
-                        <input type="password" id="cvv" class="form-control form-control-lg input-text" aria-describedby="codigoHelpBlock" placeholder="CVV" aria-label="Ingresar código de seguridad">
+                    <div class="input-group" id="cvv-input-group">
+                        <input type="password" class="form-control form-control-lg input-text" aria-describedby="codigoHelpBlock" placeholder="CVV" aria-label="Código de seguridad">
                         <div class="input-group-append">
-                          <button class="btn btn-outline-secondary" type="button" id="toggle-codigo" aria-label="Muestra código de seguridad como texto sin formato. Advertencia: esto mostrará su código de seguridad en la pantalla.">
+                          <button class="btn btn-outline-secondary" type="button" data-toggle="button" aria-pressed="false" aria-label="Mostrar en pantalla los números ingresados para CVV.">
                             <i id="icon-pass" class="bi bi-eye-fill" aria-hidden="true"></i>
                           </button>
                         </div>
@@ -92,12 +91,12 @@
             </div>
             
             <div class="form-group">
-              <input type="text" id="nombre" class="form-control form-control-lg input-text" placeholder="Nombre que figura en la tarjeta" aria-label="Ingresar nombre que figura en la tarjeta">
+              <input type="text" id="nombre" class="form-control form-control-lg input-text" placeholder="Nombre que figura en la tarjeta" aria-label="Nombre que figura en la tarjeta">
             </div>
             
             
             <div class="form-group">
-              <input type="text" id="dni" class="form-control form-control-lg" placeholder="DNI" aria-label="Ingresar Documento Nacional de Identidad">
+              <input type="text" id="dni" class="form-control form-control-lg" placeholder="DNI" aria-label="DNI">
             </div>
 
             <div class="form-group">
@@ -110,8 +109,6 @@
               </div>
             </div>
             
-            
-           
             <button type="submit" class="btn btn-primary btn-lg btn-block btn-heading2">Finalizar</button>
         
         </form>
@@ -130,70 +127,26 @@
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s" crossorigin="anonymous"></script>
        
       <script type="text/javascript">
-        /*document.querySelector('.input-group-text .bi').addEventListener('click', e => {
-          const passwordInput = document.querySelector('#contrasenia');
-          if (e.target.classList.contains('show')) {
-              e.target.classList.remove('show');
-              //e.target.textContent = '<i class="bi bi-eye-slash-fill"></i>';
-              e.target.classList.remove('bi-eye-fill');
-              e.target.classList.add('bi-eye-slash-fill');
-              passwordInput.type = 'text';
+        ['cvv-input-group'].map(id => document.getElementById(id))
+          .forEach(inputGroup => {
+            const input = inputGroup.querySelector('input')
+            const button = inputGroup.querySelector('button')
+            const icon = button.querySelector('i')
+
+            button.addEventListener('click', function () {
+              const pressed = JSON.parse(button.getAttribute('aria-pressed'))
+              if (!pressed) {
+                input.type = 'text'
+                icon.classList.remove('bi-eye-fill')
+                icon.classList.add('bi-eye-slash-fill')
           } else {
-              e.target.classList.add('show');
-              //e.target.textContent = '<i class="bi bi-eye-fill"></i>';
-              e.target.classList.add('bi-eye-fill');
-              e.target.classList.remove('bi-eye-slash-fill');
-              
-              passwordInput.type = 'password';
-          }
-      });*/
-           
-      const passwordInput = document.getElementById('tarjeta');
-      const togglePasswordButton = document.getElementById('toggle-tarjeta');
-      const iconPass = document.getElementById('icon-pass');
-      togglePasswordButton.addEventListener('click', togglePassword);
-      function togglePassword() {  
-        if (passwordInput.type === 'password') 
-          {    passwordInput.type = 'text';    
-               //togglePasswordButton.textContent = 'Hide password';    
-               iconPass.classList.remove('bi-eye-fill');
-               iconPass.classList.add('bi-eye-slash-fill');
-               togglePasswordButton.setAttribute('aria-label', 'Ocultar número tarjeta.');  
+                input.type = 'password'
+                icon.classList.remove('bi-eye-slash-fill')
+                icon.classList.add('bi-eye-fill')
           } 
-      else {   passwordInput.type = 'password';    
-               //togglePasswordButton.textContent = 'Show password'; 
-               iconPass.classList.remove('bi-eye-slash-fill');
-               iconPass.classList.add('bi-eye-fill');
-               togglePasswordButton.setAttribute('aria-label', 'Mostrar número tarjeta como texto sin formato. ' + 'Advertencia: esto mostrará su número tarjeta en la pantalla.');  
-          }}
-     
-  
-      const repasswordInput = document.getElementById('cvv');
-      const toggleRePasswordButton = document.getElementById('toggle-codigo');
-      const iconRePass = document.getElementById('icon-repass');
-      toggleRePasswordButton.addEventListener('click', togglePassword);
-      function togglePassword() {  
-        if (repasswordInput.type === 'password') 
-          {    repasswordInput.type = 'text';    
-               //togglePasswordButton.textContent = 'Hide password';    
-               iconRePass.classList.remove('bi-eye-fill');
-               iconRePass.classList.add('bi-eye-slash-fill');
-               toggleRePasswordButton.setAttribute('aria-label', 'Ocultar código seguridad.');  
-          } 
-      else {   repasswordInput.type = 'password';    
-               //togglePasswordButton.textContent = 'Show password'; 
-               iconRePass.classList.remove('bi-eye-slash-fill');
-               iconRePass.classList.add('bi-eye-fill');
-               toggleRePasswordButton.setAttribute('aria-label', 'Mostrar código seguridad como texto sin formato. ' + 'Advertencia: esto mostrará su código seguridad en la pantalla.');  
-          }}
-      
-      
-      
-      
-      
-      
+            })
+          });
       </script>
   
-   
     </body>
   </html>
