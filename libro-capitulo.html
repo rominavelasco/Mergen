@@ -156,22 +156,18 @@
       
         <script type="text/javascript">
       $(document).ready(function(){
-  $('[data-toggle="tooltip"]').tooltip();
-});
-
-
+        $('#exampleModal').on('shown.bs.modal', function () {
+            $("#global_content").attr('aria-hidden', true);
+        });
         
-        //$('#global_content').attr('aria-hidden', 'true');
-                
-                //$('#exampleModal').on('hidden.bs.modal', function(){
-//$('#global_content').attr('aria-hidden', 'true');
-//});
-$('#exampleModal').on('shown.bs.modal', function () {
-    $("#global_content").attr('aria-hidden', false);
-});
-$('#exampleModal').on('hidden.bs.modal', function () {
-    $("#global_content").attr('aria-hidden', true);
-});
+        $('#exampleModal').on('hidden.bs.modal', function () {
+            $("#global_content").attr('aria-hidden', false);
+        });
+        
+    
+        });
+
+
         
         </script>
   

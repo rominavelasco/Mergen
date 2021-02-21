@@ -362,6 +362,18 @@
         
             //$('#myModal').modal(options);
 
+            $(document).ready(function(){
+              $('#exampleModal').on('shown.bs.modal', function () {
+            $("#global_content").attr('aria-hidden', true);
+        });
+        
+        $('#exampleModal').on('hidden.bs.modal', function () {
+            $("#global_content").attr('aria-hidden', false);
+        });
+        
+    
+        });
+
             $(document).ready(function() {
               $('.owl-carousel').owlCarousel({
                 loop: false,
