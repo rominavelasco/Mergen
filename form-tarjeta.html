@@ -49,23 +49,34 @@
         </p>
         
         <h2 class="heading2">Ingresá tus datos de tarjeta</h2>
+
+        <p class="poppins-p">Todos los campos son obligatorios.</p>
       
-        <form action="premium-exito.html">
+        <form action="premium-exito.html" class="needs-validation" novalidate>
             
             <div class="form-group">
                 <div class="input-group">
-                  <input id="tarjeta" class="form-control form-control-lg input-text" aria-describedby="passwordHelpBlock" placeholder="Número de Tarjeta" aria-label="Número de Tarjeta">
+                  <input id="tarjeta" name="tarjeta" class="form-control form-control-lg input-text" aria-describedby="passwordHelpBlock tarjetaFeedback" placeholder="Número de Tarjeta" aria-label="Número de Tarjeta (Obligatorio)" required>
+                  <div class="invalid-feedback" id="tarjetaFeedback">
+                    Campo tarjeta es obligatorio.
+                  </div>
                 </div>
                 
                 <small id="passwordHelpBlock" class="form-text text-muted">
                     Ingresá los números sin guión
-                </small>               
+                </small>                
+                
             </div>
             
             <div class="form-row">
                 
                 <div class="form-group col-6 col-md-6">
-                    <input type="text" id="vencimiento" class="form-control form-control-lg input-text" aria-describedby="venceHelpBlock" placeholder="Vencimiento" aria-label="Vencimiento">
+                    <input type="text" id="vencimiento" class="form-control form-control-lg input-text" aria-describedby="venceHelpBlock vencimientoFeedback" placeholder="Vencimiento" aria-label="Vencimiento (Obligatorio)" required>
+                    
+                    <div class="invalid-feedback" id="vencimientoFeedback">
+                      Campo vencimiento es obligatorio.
+                    </div>
+                    
                     <small id="venceHelpBlock" class="form-text text-muted" aria-label="Formato: dos dígitos para el mes - barra - dos dígitos para el año">
                       <span aria-hidden="true">Formato MM/AA</span>
                     </small>
@@ -73,13 +84,17 @@
                 
                 <div class="form-group col-6 col-md-6">
                     <div class="input-group" id="cvv-input-group">
-                        <input type="password" class="form-control form-control-lg input-text" aria-describedby="codigoHelpBlock" placeholder="CVV" aria-label="Código de seguridad">
+                        <input type="password" name="password" class="form-control form-control-lg input-text" aria-describedby="codigoHelpBlock codigoFeedback" placeholder="CVV" aria-label="Código de seguridad (Obligatorio)" required>
                         <div class="input-group-append">
                           <button class="btn btn-outline-secondary" type="button" data-toggle="button" aria-pressed="false" aria-label="Mostrar en pantalla los números ingresados para CVV.">
                             <i id="icon-pass" class="bi bi-eye-fill" aria-hidden="true"></i>
                           </button>
                         </div>
-                  </div>
+
+                        <div class="invalid-feedback" id="codigoFeedback">
+                          Campo código de seguridad es obligatorio.
+                        </div>
+                    </div>
                     
                     <small id="codigoHelpBlock" class="form-text text-muted" aria-hidden="true">
                         Código de Seguridad
@@ -89,21 +104,33 @@
             </div>
             
             <div class="form-group">
-              <input type="text" id="nombre" class="form-control form-control-lg input-text" placeholder="Nombre que figura en la tarjeta" aria-label="Nombre que figura en la tarjeta">
+              <input type="text" id="nombre" class="form-control form-control-lg input-text" placeholder="Nombre que figura en la tarjeta" aria-label="Nombre que figura en la tarjeta (Obligatorio)" aria-describedby="nombreFeedback" required>
+              
+              <div class="invalid-feedback" id="nombreFeedback">
+                Campo nombre que figura en la tarjeta es obligatorio.
+              </div>
+            
             </div>
             
             
             <div class="form-group">
-              <input type="text" id="dni" class="form-control form-control-lg" placeholder="DNI" aria-label="DNI">
+              <input type="text" id="dni" name="dni" class="form-control form-control-lg" placeholder="DNI" aria-label="DNI" aria-describedby="dniFeedback" required>
+              
+              <div class="invalid-feedback" id="dniFeedback">
+                Campo documento de identidad es obligatorio.
+              </div>
             </div>
 
             <div class="form-group">
               <div class="form-check">
-                <input class="form-check-input check-input" type="checkbox" id="check" value="terminosCondiciones">
+                <input class="form-check-input check-input" type="checkbox" id="check" value="terminosCondiciones" aria-describedby="checkFeedback" required>
                 <label class="form-check-label" for="check">
                     Acepto los
                     <a href="#" title="Ver los Términos y condiciones" class="link-bold">Términos y condiciones</a>  
                 </label>
+              </div>
+              <div class="invalid-feedback" id="checkFeedback">
+                Debe estar de acuerdo antes de enviar.
               </div>
             </div>
             
@@ -144,6 +171,24 @@
               }
             })
           });
+
+          (function() {
+  'use strict';
+  window.addEventListener('load', function() {
+    // Fetch all the forms we want to apply custom Bootstrap validation styles to
+    var forms = document.getElementsByClassName('needs-validation');
+    // Loop over them and prevent submission
+    var validation = Array.prototype.filter.call(forms, function(form) {
+      form.addEventListener('submit', function(event) {
+        if (form.checkValidity() === false) {
+          event.preventDefault();
+          event.stopPropagation();
+        }
+        form.classList.add('was-validated');
+      }, false);
+    });
+  }, false);
+})();
       </script>
    
     </body>

@@ -44,22 +44,30 @@
         <h1 class="heading1">Registrate gratis</h1>                    
         <p class="heading2">Completá los datos de tu nueva cuenta</p>
       
-        <form action="registro-exito.html">
+        <p class="poppins-p">Todos los campos son obligatorios.</p>
+        
+        <form action="registro-exito.html" class="needs-validation" novalidate>
             
             <div class="form-group">
-                <input type="email" id="email" class="form-control form-control-lg input-text" placeholder="Email" aria-label="Email">
+                <input type="email" id="email" name="email" class="form-control form-control-lg input-text" placeholder="Email" aria-label="Email (Obligatorio)" aria-describedby="emailFeedback" required>
+                <div class="invalid-feedback" id="emailFeedback">
+                  Campo email es obligatorio
+                </div>
             </div>
             
             
             <div class="form-group">
                 <div class="input-group" id="password-input-group">
-                  <input type="password" class="form-control form-control-lg input-text" aria-describedby="passwordHelpBlock" placeholder="Contraseña" aria-label="Contraseña">
+                  <input type="password" id="password" name="password" class="form-control form-control-lg input-text" aria-describedby="passwordHelpBlock passwordFeedback" placeholder="Contraseña" aria-label="Contraseña (Obligatorio)" required>
                     <div class="input-group-append">
                       <button class="btn btn-outline-secondary" type="button" data-toggle="button" aria-pressed="false" aria-label="Mostrar en pantalla el texto ingresado para contraseña.">
                         <i id="icon-pass" class="bi bi-eye-fill" aria-hidden="true"></i>
                       </button>
                     </div>
+                <div class="invalid-feedback" id="passwordFeedback">
+                  Campo contraseña es obligatorio.
                 </div>
+            </div>
                 
                 <small id="passwordHelpBlock" class="form-text text-muted">
                     Mínimo 8 caracteres con al menos una mayúscula.
@@ -69,11 +77,14 @@
             
             <div class="form-group">
                 <div class="input-group" id="confirmpassword-input-group">                    
-                    <input type="password" class="form-control form-control-lg input-text" placeholder="Confirmar Contraseña" aria-label="Confirmar Contraseña">
+                    <input type="password" id="repass" name="repass" class="form-control form-control-lg input-text" placeholder="Confirmar Contraseña" aria-label="Confirmar Contraseña (Obligatorio)" aria-describedby="repassFeedback" required>
                     <div class="input-group-append">
                       <button class="btn btn-outline-secondary" type="button" data-toggle="button" aria-pressed="false" aria-label="Mostrar en pantalla el texto ingresado para confirmación de contraseña.">
                         <i id="icon-repass" class="bi bi-eye-fill" aria-hidden="true"></i>
                       </button>
+                    </div>
+                    <div class="invalid-feedback" id="repassFeedback">
+                      Campo reingresar contraseña es obligatorio.
                     </div>
                 </div>               
             </div>    
@@ -112,6 +123,24 @@
               }
             })
           });
+
+          (function() {
+  'use strict';
+  window.addEventListener('load', function() {
+    // Fetch all the forms we want to apply custom Bootstrap validation styles to
+    var forms = document.getElementsByClassName('needs-validation');
+    // Loop over them and prevent submission
+    var validation = Array.prototype.filter.call(forms, function(form) {
+      form.addEventListener('submit', function(event) {
+        if (form.checkValidity() === false) {
+          event.preventDefault();
+          event.stopPropagation();
+        }
+        form.classList.add('was-validated');
+      }, false);
+    });
+  }, false);
+})();
       </script>
    
     </body>
