@@ -14,26 +14,14 @@
     <!--General CSS-->
     <link rel="stylesheet" href="css/general.css">
 
-    <style>
-        .btn-group {
-            border-radius: 6px;
-            box-shadow: 1px 2px #383142;
-            margin-bottom: 0px;
-        }
-
-        .bi-bookmark2 {
-            margin-left: 0px!important;
-        }
-       
-        .p-frase{
-            padding-top: 0px!important;
-        }
-
-        
-    </style>
-    
     </head>
     <body>
+        <nav class="navbar fixed-top navbar-light bg-light" id="nav-superior">
+            <a class="navbar-brand" href="libro-descarga.html" aria-label="Volver atrás">
+              <i aria-hidden="true" class="bi bi-arrow-left-short"></i>
+            </a>
+           
+        </nav>  
    
     <main>
       
@@ -42,7 +30,7 @@
         <div class="row">
             <div class="col-12">
                 
-                <h1 class="heading1" style="text-align: center;">1</h1>
+                <h1 class="heading1" style="text-align: center;margin-top: 2px;"><span class="sr-only">Rayuela Capítulo</span>1</h1>
     
                 <p class="poppins-p">
                     ¿Encontraría a la Maga? Tantas veces me había bastado asomarme, viniendo
@@ -158,10 +146,12 @@
       $(document).ready(function(){
         $('#exampleModal').on('shown.bs.modal', function () {
             $("#global_content").attr('aria-hidden', true);
+            $("#nav-superior").attr('aria-hidden', true);
         });
         
         $('#exampleModal').on('hidden.bs.modal', function () {
             $("#global_content").attr('aria-hidden', false);
+            $("#nav-superior").attr('aria-hidden', false);
         });
         
     

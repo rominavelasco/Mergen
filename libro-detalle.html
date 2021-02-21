@@ -365,10 +365,12 @@
             $(document).ready(function(){
               $('#exampleModal').on('shown.bs.modal', function () {
             $("#global_content").attr('aria-hidden', true);
+            $("#nav-superior").attr('aria-hidden', true);
         });
         
         $('#exampleModal').on('hidden.bs.modal', function () {
             $("#global_content").attr('aria-hidden', false);
+            $("#nav-superior").attr('aria-hidden', false);
         });
         
     
