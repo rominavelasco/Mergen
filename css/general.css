@@ -6,12 +6,19 @@ Texto-Primario: #ffffff;
 Texto-Secunadario: #000000;
 color error: color:#d55c00;
 */
+
+
 /*
 font-family: 'Poppins', sans-serif;*/
+
+
 /*@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap');*/
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;1,100;1,200;1,300;1,400&display=swap');
+body {
+    font-family: 'Poppins', sans-serif;
+}
 
 
 /* headings */
@@ -19,7 +26,7 @@ font-family: 'Poppins', sans-serif;*/
 .heading1 {
     font-family: 'Poppins', sans-serif;
     font-size: 18px;
-    color:#383142;
+    color: #383142;
     font-style: normal;
     font-weight: 600;
     line-height: 22px;
@@ -30,7 +37,7 @@ font-family: 'Poppins', sans-serif;*/
 .heading2 {
     font-family: 'Poppins', sans-serif;
     font-size: 16px;
-    color:#383142;
+    color: #383142;
     font-style: normal;
     font-weight: 400;
     line-height: 20px;
@@ -41,7 +48,7 @@ font-family: 'Poppins', sans-serif;*/
 .heading3 {
     font-family: 'Poppins', sans-serif;
     font-size: 14px;
-    color:#383142;
+    color: #383142;
     font-style: normal;
     font-weight: 400;
     line-height: 18px;
@@ -52,13 +59,14 @@ font-family: 'Poppins', sans-serif;*/
 .heading4 {
     font-family: 'Poppins', sans-serif;
     font-size: 12px;
-    color:#383142;
+    color: #383142;
     font-style: normal;
     font-weight: 400;
     line-height: 16px;
     letter-spacing: 0em;
     text-align: left;
 }
+
 
 /* Parrafo */
 
@@ -78,17 +86,18 @@ p.poppins-p {
 /* Buttons btn-primary btn-secondary btn-block */
 
 .btn-primary {
-    background-color:#5B14BC!important;
+    background-color: #5B14BC!important;
     color: #ffffff!important;
     border: 1px solid #5B14BC!important;
 }
 
 .btn-secondary {
-    background-color:#ffffff!important;   
+    background-color: #ffffff!important;
     color: #7B20F9!important;
     border: 1px solid #7B20F9!important;
     margin-bottom: 16px;
 }
+
 
 /* btn-block modal leer rayuela */
 
@@ -96,10 +105,9 @@ p.poppins-p {
     margin-bottom: 16px !important;
 }
 
-
 .btn-heading2 {
     font-family: 'Poppins', sans-serif;
-    font-size: 16px;    
+    font-size: 16px;
     font-style: normal;
     font-weight: 400;
     line-height: 20px;
@@ -107,13 +115,16 @@ p.poppins-p {
     text-align: center;
 }
 
+
 /* btn buscador*/
 
 .btn-outline-secondary {
     border-color: #dadada;
 }
-   
+
+
 /*btn descarga*/
+
 .btn-descarga {
     border: none;
     background-color: #fff;
@@ -121,19 +132,22 @@ p.poppins-p {
     padding-right: 5px;
 }
 
+
 /* Card */
 
 .card {
     border-style: none;
 }
 
-.card-img, .card-img-top {
+.card-img,
+.card-img-top {
     border-radius: 8px;
     /*width: 320px;
     height: 286px;
     margin: 0 auto;*/
     box-shadow: 0px 5px 5px rgb(0 0 0 / 42%);
 }
+
 
 /*.container, .container-fluid, .container-lg, .container-md, .container-sm, .container-xl {
     width: 100%;
@@ -143,14 +157,15 @@ p.poppins-p {
     margin-left: auto;
 }*/
 
+
 /* badge */
 
 .badge-primary {
     background-color: #E4D1FF;
     margin-right: 0.5em;
     line-height: 24px!important;
-    color: #7A1BF5!important; 
-    text-align: center!important; 
+    color: #7A1BF5!important;
+    text-align: center!important;
     font-family: 'Poppins', sans-serif;
     font-size: 12px;
     font-style: normal;
@@ -158,6 +173,7 @@ p.poppins-p {
     letter-spacing: 0em;
     margin-top: 24px;
 }
+
 
 /*.badge-primary .heading4 {
 
@@ -176,15 +192,18 @@ p.poppins-p {
     margin-bottom: 0px;
 }
 
+
 /*.btn-group-lg>.btn, .btn-lg {
     padding: 0.7rem 1rem;
 }*/
+
 
 /* Links */
 
 a {
     color: #7B20F9;
 }
+
 
 /* Icon star */
 
@@ -193,7 +212,8 @@ i.bi.bi-star-fill {
     font-size: 10px;
 }
 
-i.bi.bi-three-dots-vertical, i.bi.bi-arrow-left-short {
+i.bi.bi-three-dots-vertical,
+i.bi.bi-arrow-left-short {
     font-size: 1.2rem !important;
 }
 
@@ -206,24 +226,29 @@ i.bi.bi-share-fill {
     font-size: 1.7rem;
 }
 
-.bi-star-fill::before, .bi-eye-fill::before {
+.bi-star-fill::before,
+.bi-eye-fill::before {
     line-height: 16px !important;
 }
 
-i.bi.bi-download, i.bi.bi-bookmark {
+i.bi.bi-download,
+i.bi.bi-bookmark {
     color: #383142 !important;
     font-size: 16px;
     margin-left: 8px;
 }
 
-.bi-share-fill::before, .bi-arrow-left-short::before, .bi-three-dots-vertical::before {
+.bi-share-fill::before,
+.bi-arrow-left-short::before,
+.bi-three-dots-vertical::before {
     line-height: 1.5rem !important;
 }
 
 .bi-check-circle {
-    color:#0c8377; 
+    color: #0c8377;
     font-size: 16px;
 }
+
 
 /* Navbar color icon*/
 
@@ -233,9 +258,10 @@ i.bi.bi-download, i.bi.bi-bookmark {
     font-style: normal;
     font-weight: 600;
     line-height: 34px;
-   color: #383142!important;
+    color: #383142!important;
 }
-   
+
+
 /* Link bold */
 
 .link-bold {
@@ -243,8 +269,8 @@ i.bi.bi-download, i.bi.bi-bookmark {
 }
 
 
-
 /*----------------------------------------------*/
+
 
 /*.item.col-sm-4.col-xl-4 {
     padding: 0px !important;
@@ -252,6 +278,7 @@ i.bi.bi-download, i.bi.bi-bookmark {
 .owl-carousel .owl-item {
     margin-right: 8px !important;
 }*/
+
 .owl-carousel .owl-item img {
     display: block;
     width: 100%;
@@ -274,8 +301,9 @@ i.bi.bi-download, i.bi.bi-bookmark {
     background-color: #7B20F9!important;
     color: #ffffff!important;
     border: 1px solid #7B20F9!important;
-height: 48px;
+    height: 48px;
 }
+
 
 /*Necesito que los votos tengan un div y tenga una clase.
 
@@ -289,7 +317,9 @@ Este row debería tener una clase xq hay varios es para la bajada de la card pri
     margin: 32px 0;
 }
 
+
 /* Hader Nav */
+
 .bg-light {
     box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.1);
     background-color: #ffffff!important;
@@ -301,11 +331,12 @@ Este row debería tener una clase xq hay varios es para la bajada de la card pri
     color: #383142;
 }
 
+
 /* Navbar bottom */
 
 .navbar-bottom {
-    background-color: #7B20F9;   
-    padding: 0; 
+    background-color: #7B20F9;
+    padding: 0;
 }
 
 .text-bottom {
@@ -350,7 +381,10 @@ Este row debería tener una clase xq hay varios es para la bajada de la card pri
     max-width: 90px;
 }
 
+
 /*********************************/
+
+
 /*.navbar-expand .navbar-nav .nav-link [class^="bi-"]::before, [class*=" bi-"]::before, .navbar-expand .navbar-nav .nav-link .active .text-bottom {
     color: #E4D1FF !important;
 }
@@ -364,7 +398,7 @@ Este row debería tener una clase xq hay varios es para la bajada de la card pri
     background-color: #442a8c;
 }
 
-.nav-active .bi-house-door-fill::before{
+.nav-active .bi-house-door-fill::before {
     color: #E4D1FF!important;
 }
 
@@ -372,22 +406,25 @@ Este row debería tener una clase xq hay varios es para la bajada de la card pri
     color: #E4D1FF!important;
 }
 
-.bi-mic::before, .bi-search::before  {
+.bi-mic::before,
+.bi-search::before {
     color: #383142 !important;
 }
+
 
 /* Form control inputs*/
 
 .form-control {
     border: 1px solid #DADADA;
     border-radius: 4px;
-    font-family: 'Poppins', sans-serif;    
+    font-family: 'Poppins', sans-serif;
 }
 
 .form-control-lg {
     font-size: 1rem;
     height: 3rem;
 }
+
 
 /* Modal */
 
@@ -400,15 +437,20 @@ Este row debería tener una clase xq hay varios es para la bajada de la card pri
     margin: 0px;
 }
 
+
 /*a los botones les faltan los estilos de heading2 - agregado*/
 
 .modal-body .heading1 {
-   text-align: center;
-   margin-bottom: 16px;
+    text-align: center;
+    margin-bottom: 16px;
 }
 
+
 /*revisar*/
+
+
 /*main - margin son necesarios para que no tape contenido revisar que no afecte el estilo general*/
+
 .navbar {
     height: 60px;
 }
@@ -425,7 +467,7 @@ main {
 main.no-footer {
     --footer-height: 20px;
 }
-   
+
 .heading3 {
     margin: 16px 0;
 }
@@ -434,12 +476,16 @@ main.no-footer {
     z-index: 1072!important;
 }
 
+
 /* a href btn */
+
 .href-btn {
     padding: .8rem 1rem;
 }
 
+
 /* Perfil */
+
 .avatar {
     border-radius: 50%;
 }
@@ -448,7 +494,8 @@ main.no-footer {
     font-family: 'Material Icons';
     font-weight: normal;
     font-style: normal;
-    font-size: 24px;  /* Preferred icon size */
+    font-size: 24px;
+    /* Preferred icon size */
     display: inline-block;
     line-height: 1;
     text-transform: none;
@@ -461,10 +508,8 @@ main.no-footer {
     -webkit-font-smoothing: antialiased;
     /* Support for Safari and Chrome. */
     text-rendering: optimizeLegibility;
-  
     /* Support for Firefox. */
     -moz-osx-font-smoothing: grayscale;
-  
     /* Support for IE. */
     font-feature-settings: 'liga';
 }
@@ -473,12 +518,12 @@ main.no-footer {
     background-color: #7B20F9;
 }
 
-.jumbotronH1{
-    color:#fff;
+.jumbotronH1 {
+    color: #fff;
 }
 
-.jumbotronH2{
-    color:#fff;
+.jumbotronH2 {
+    color: #fff;
 }
 
 .list-group-item {
@@ -488,7 +533,9 @@ main.no-footer {
 
 /* ---------- */
 
+
 /* checkboxes */
+
 .form-check-input {
     width: 16px;
     height: 16px;
@@ -499,7 +546,9 @@ main.no-footer {
     margin-left: 6px;
 }
 
+
 /* Libro capitulo */
+
 .btn-group {
     border-radius: 6px;
     box-shadow: 1px 2px #383142;
@@ -510,13 +559,14 @@ main.no-footer {
     margin-left: 0px!important;
 }
 
-.p-frase{
+.p-frase {
     padding-top: 0px!important;
 }
 
 .frase {
     background-color: #FCCE5C;
 }
+
 
 /* Declaracion de Accesibilidad */
 
@@ -533,5 +583,5 @@ main.no-footer {
 }
 
 .list-li li::marker {
-color: #7B20F9;
+    color: #7B20F9;
 }
