@@ -455,12 +455,17 @@ Este row debería tener una clase xq hay varios es para la bajada de la card pri
     height: 60px;
 }
 
+html,
+body {
+    height: calc(100vh - calc(100vh - 100%))
+}
+
 main {
     --header-height: 60px;
     --footer-height: 60px;
     margin-top: var(--header-height);
     margin-bottom: var(--footer-height);
-    height: calc(100vh - var(--header-height) - var(--footer-height));
+    height: calc(100% - var(--header-height) - var(--footer-height));
     overflow: auto;
 }
 
