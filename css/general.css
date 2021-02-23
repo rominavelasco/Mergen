@@ -399,16 +399,21 @@ Este row debería tener una clase xq hay varios es para la bajada de la card pri
 }
 
 .nav-active .bi-house-door-fill::before {
-    color: #E4D1FF!important;
+    color: #ffffff!important;
 }
 
 .nav-active .bi-search::before {
-    color: #E4D1FF!important;
+    color: #ffffff!important;
 }
 
+.bi-search2 {
+    color: #383142!important;
+}
+
+
 .bi-mic::before,
-.bi-search::before {
-    color: #383142 !important;
+.bi-search2::before {
+    color: #383142!important;
 }
 
 
