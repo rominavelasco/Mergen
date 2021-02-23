@@ -25,6 +25,7 @@
 
 <body>
 
+<div id="global_content">
   <nav class="navbar fixed-top navbar-light bg-light">
     <a class="navbar-brand" href="buscador-detalle.html" aria-label="Volver atrás">
       <i aria-hidden="true" class="bi bi-arrow-left-short"></i>
@@ -165,7 +166,7 @@
     </div>
 
   </main>
-
+</div>
   <!-- Modal -->
   <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="dialog_label" aria-describedby="dialog_desc"
     aria-hidden="true">
@@ -176,8 +177,8 @@
             <div class="row">
               <div class="col-6 offset-3 text-center">
                 <svg id="dialog_label" width="90" height="25" viewBox="0 0 90 25" fill="none"
-                  xmlns="http://www.w3.org/2000/svg" role="img">
-                  <title>Mergen, tu biblioteca digital</title>
+                  xmlns="http://www.w3.org/2000/svg" aria-describedby="my-title" role="img">
+                  <title id="my-title">Mergen, tu biblioteca digital</title>
                   <path
                     d="M21.2795 17.6464C21.2795 18.043 21.14 18.2413 20.8612 18.2413H18.8772C18.7258 18.2413 18.5944 18.1937 18.4828 18.0985C18.3713 18.0033 18.3075 17.8843 18.2916 17.7416L17.467 10.6259C17.3634 9.72949 17.2837 8.84499 17.2279 7.97239C17.1801 7.09979 17.1244 6.18753 17.0606 5.2356L16.9411 3.54593C16.9411 3.5142 16.9292 3.49833 16.9053 3.49833C16.8893 3.49833 16.8774 3.51023 16.8694 3.53403L16.3316 5.48548C16.22 5.88212 16.0965 6.27876 15.9611 6.67539L12.2323 16.7777C12.1924 16.8967 12.1127 17.0078 11.9932 17.1109C11.8737 17.214 11.7542 17.2656 11.6347 17.2656H9.75832C9.51132 17.2656 9.31213 17.1069 9.16075 16.7896C6.39599 10.3403 4.92198 6.89354 4.73873 6.44931C4.56344 5.99714 4.40807 5.56878 4.27262 5.16421L3.73481 3.52213C3.72684 3.49833 3.71091 3.48643 3.68701 3.48643C3.67107 3.48643 3.65912 3.5023 3.65115 3.53403V5.46169C3.65115 7.14342 3.58343 8.86086 3.44798 10.614L2.91017 17.7416C2.89423 17.8685 2.81854 17.9835 2.68309 18.0866C2.55561 18.1898 2.42016 18.2413 2.27674 18.2413H0.627448C0.436226 18.2413 0.276874 18.158 0.149392 17.9914C0.0298785 17.8248 -0.0179271 17.6226 0.0059757 17.3846L1.44014 1.72537C1.49592 1.06695 1.57559 0.650484 1.67917 0.475964C1.86243 0.158655 2.19707 0 2.68309 0H3.97384C4.36425 0 4.63515 0.0515627 4.78653 0.154688C5.0654 0.337141 5.30841 0.682215 5.51557 1.18991L10.6666 13.684L15.1723 1.17801C15.4352 0.39267 15.8814 0 16.5109 0H17.8614C18.5625 0 18.9728 0.321276 19.0924 0.963827C19.1242 1.17008 19.1561 1.39219 19.188 1.63018L21.2556 17.3965C21.2715 17.4758 21.2795 17.5591 21.2795 17.6464Z"
                     fill="#7B20F9" />
@@ -213,7 +214,7 @@
             <div class="row">
               <div class="col-sm-12 col-lg-6 offset-lg-2">
                 <svg width="120%" viewBox="0 0 376 224" fill="none" xmlns="http://www.w3.org/2000/svg"
-                  aria-describedby="my-title1 my-descrip1" role="img">
+                  aria-describedby="my-title1" role="img">
                   <title id="my-title1">Valor Suscripción: tan solo 150 pesos por mes</title>
                   <g clip-path="url(#clip0)">
                     <path d="M297.326 123.695L286.369 149.763L325.043 166.019L336 139.95L297.326 123.695Z"
@@ -581,19 +582,19 @@
   <script type="text/javascript">
     //$('#myModal').modal(options);
 
-    /*$(document).ready(function () {
+    $(document).ready(function () {
       $('#exampleModal').on('shown.bs.modal', function () {
         $("#global_content").attr('aria-hidden', true);
-        $("#nav-superior").attr('aria-hidden', true);
+        //$("#nav-superior").attr('aria-hidden', true);
       });
 
       $('#exampleModal').on('hidden.bs.modal', function () {
         $("#global_content").attr('aria-hidden', false);
-        $("#nav-superior").attr('aria-hidden', false);
+        //$("#nav-superior").attr('aria-hidden', false);
       });
 
 
-    });*/
+    });
 
     $(document).ready(function () {
       $('.owl-carousel').owlCarousel({
