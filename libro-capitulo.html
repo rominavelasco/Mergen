@@ -19,6 +19,7 @@
 </head>
 
 <body>
+<div id="global_content">
     <nav class="navbar fixed-top navbar-light bg-light" id="nav-superior">
         <a class="navbar-brand" href="libro-descarga.html" aria-label="Volver atrás">
             <i aria-hidden="true" class="bi bi-arrow-left-short"></i>
@@ -125,7 +126,8 @@
         </div>
 
     </main>
-
+    <!-- Global content -->
+</div>
     <!-- Modal -->
     <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="dialog_label" aria-hidden="true">
         <div class="modal-dialog">
@@ -173,12 +175,12 @@
         $(document).ready(function () {
             $('#exampleModal').on('shown.bs.modal', function () {
                 $("#global_content").attr('aria-hidden', true);
-                $("#nav-superior").attr('aria-hidden', true);
+                
             });
 
             $('#exampleModal').on('hidden.bs.modal', function () {
                 $("#global_content").attr('aria-hidden', false);
-                $("#nav-superior").attr('aria-hidden', false);
+                
             });
 
 
